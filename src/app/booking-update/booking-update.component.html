@@ -1,0 +1,28 @@
+<div class="update-form-container">
+    <h2>Update Homestay</h2>
+    <form [formGroup]="bookingForm" (ngSubmit)="updatebooking()">
+      <div>
+        <label for="homestay_id ">homestay_id :</label>
+        <input type="text" formControlName="homestay_id " id="homestay_id " />
+      </div>
+      <div>
+        <label for="guest_id ">guest_id:</label>
+        <input type="text " formControlName="guest_id " id="guest_id " />
+      </div>
+      <div>
+        <label for="num_guests ">num_guests:</label>
+        <input type="text " formControlName="num_guests " id="num_guests " />
+      </div>
+      <div>
+        <label for="check_in_date">check_in_date:</label>
+        <input type="date" formControlName="check_in_date" id="check_in_date" />
+      </div>
+      <div>
+        <label for="check_out_date">check_out_date:</label>
+        <input type="date" formControlName="check_out_date" id="check_out_date" />
+      </div>
+      <div>
+        <button type="submit" [disabled]="!bookingForm.valid">Update</button>
+      </div>
+    </form>
+</div>

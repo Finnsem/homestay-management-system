@@ -1,0 +1,9 @@
+.navbar-brand {
+    margin-left: 900px; /* Set the left and right margins to auto for centering */
+    display: flex; /* Use display: table to center the element */
+    position: absolute;
+  }
+  .collapse{
+    margin-left: 500px; /* Set the left and right margins to auto for centering */
+    display: table; 
+  }

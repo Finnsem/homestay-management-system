@@ -1,1 +1,33 @@
-<p>homestay-list works!</p>
+<div class="hero-section">
+  <div class="hero-content">
+    <h1 class="h1-c"><strong>Homestay Listings</strong></h1>
+    <button class="action-button add-button" [routerLink]="['/add']" routerLinkActive="router-link-active">ADD</button>
+  </div>
+</div>
+<table class="homestay-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>OWNER_ID</th>
+      <th>ROOM AVAILABLE</th>
+      <th>ADDRESS</th>
+      <th>PRICE ($)</th>
+      <th>ACTIONS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let homestay of homestays">
+
+      <td>{{ homestay.id }}</td>
+      <td>{{ homestay.owner_id }}</td>
+      <td>{{ homestay.rooms_available }}</td>
+      <td>{{ homestay.address }}</td>
+      <td>{{ homestay.price }}</td>
+      <td>
+        <button class="action-button view-button" (click)="openHomestayDetailsDialog(homestay.id)">VIEW</button>
+        <button class="action-button update-button"(click)="updateHomestay(homestay.id)">UPDATE</button>
+        <button class="action-button delete-button" (click)="deleteHomestay(homestay.id)">DELETE</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

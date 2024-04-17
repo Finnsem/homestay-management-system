@@ -1,0 +1,34 @@
+<div class="hero-section">
+    <div class="hero-content">
+      <h1 class="h1-c"><strong>Booking List(s)</strong></h1>
+      <button class="action-button add-button" [routerLink]="['/add-booking']" routerLinkActive="router-link-active">ADD</button>
+    </div>
+  </div>
+  <table class="homestay-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>HOMESTAY ID</th>
+        <th>GUEST ID</th>
+ 
+        <th>GUEST(S)</th>
+        <th>ACTIONS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bookingItem  of booking">
+  
+        <td>{{ bookingItem.id }}</td>
+        <td>{{ bookingItem.homestay_id  }}</td>
+        <td>{{ bookingItem.guest_id }}</td>
+
+        <td>{{ bookingItem.num_guests }}</td>
+        <td>
+          <button class="action-button view-button" (click)="openbookingDetailsDialog(bookingItem.id)" >VIEW</button>
+          <button class="action-button update-button" (click)="updateBooking(bookingItem.id)">UPDATE</button>
+          <button class="action-button delete-button" (click)="deletebooking(bookingItem.id)">DELETE</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

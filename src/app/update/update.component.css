@@ -1,0 +1,47 @@
+/* Style for the form container */
+.update-form-container {
+    max-width: 500px; /* Set max width for the form */
+    margin: 0 auto; /* Center align the form horizontally */
+    padding: 20px; /* Add padding */
+    background-color: #f9f9f9; /* Light gray background */
+    border-radius: 10px; /* Add border radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+  }
+  
+  /* Style for the form title */
+  .update-form-container h2 {
+    margin-bottom: 20px; /* Add margin at the bottom */
+    color: #333; /* Dark text color */
+  }
+  
+  /* Style for form labels */
+  .update-form-container label {
+    display: block; /* Display labels as blocks */
+    margin-bottom: 10px; /* Add margin at the bottom */
+    color: #555; /* Medium dark text color */
+  }
+  
+  /* Style for form inputs */
+  .update-form-container input[type="text"] {
+    width: 100%; /* Set input width to 100% */
+    padding: 10px; /* Add padding */
+    margin-bottom: 20px; /* Add margin at the bottom */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Add border radius */
+  }
+  
+  /* Style for the submit button */
+  .update-form-container button[type="submit"] {
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Add padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Add pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+  
+  .update-form-container button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+  }
+  

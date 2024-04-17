@@ -1,0 +1,30 @@
+<div class="hero-section">
+  <div class="hero-content">
+    <h1 class="h1-c"><strong>OWNER Listings</strong></h1>
+    <button class="action-button add-button" [routerLink]="['/add-owner']" routerLinkActive="router-link-active">ADD</button>
+  </div>
+</div>
+
+<table class="homestay-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>ACTIONS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let homestay of owner">
+        <td>{{ homestay.id }}</td>
+        <td>{{ homestay.name }}</td>
+        <td>{{ homestay.email }}</td>
+        <td>
+          <button class="action-button view-button" (click)="openOwnerDetailsDialog(homestay.id)">VIEW</button>
+          <button class="action-button update-button" (click)="updateowner(homestay.id)">UPDATE</button>
+          <button class="action-button delete-button" (click)="deleteowner(homestay.id)">DELETE</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

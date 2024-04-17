@@ -1,0 +1,21 @@
+<div class="update-form-container">
+    <h2>Update Homestay</h2>
+    <form [formGroup]="ownerForm" (ngSubmit)="updateowner()">
+      
+      <div>
+        <label for="name">name:</label>
+        <input type="text" formControlName="name" id="name" />
+      </div>
+      <div>
+        <label for="email">email:</label>
+        <input type="text" formControlName="email" id="email" />
+      </div>
+      <div>
+        <label for="password">password:</label>
+        <input type="password" formControlName="password" id="password" />
+      </div>
+      <div>
+        <button type="submit" [disabled]="!ownerForm.valid">Update</button>
+      </div>
+    </form>
+</div>
